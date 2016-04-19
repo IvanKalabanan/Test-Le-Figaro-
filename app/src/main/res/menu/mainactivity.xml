@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:Test_Project="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/showMenuItem"
+        android:title="@string/favorite"
+        Test_Project:showAsAction="always"/>
+</menu>

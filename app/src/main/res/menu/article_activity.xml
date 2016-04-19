@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="schemas.android.com/tools"
+    xmlns:Test_Project="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.sample.Article_Activity">
+    <item android:id="@+id/favoriteMenuItem"
+        android:icon="@mipmap/ic_action_important"
+        Test_Project:showAsAction="always"
+        android:title="@string/favorite" />
+</menu>
