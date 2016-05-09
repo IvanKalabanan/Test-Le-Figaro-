@@ -35,40 +35,35 @@ public class GetAllArticlesDataRequest extends SpiceRequest<Wrapper> {
 
     private ArrayList<List_Articles> Parser(String json_array) {
         ArrayList<List_Articles> arr = new ArrayList<List_Articles>();
-        /// very bad code
-        String rrr = json_array.substring(28);
-        String r = rrr.replace("[", "{ \"List_Articles\" : [");
-        String rr = r.replace("]", "] }");
-        ///
 
-        JSONObject json_obj = null;
+        JSONArray jsonMainNode, jsonArticle = null;
         try {
-            json_obj = new JSONObject(rr);
+            jsonMainNode = new JSONArray(json_array);
+            jsonArticle = jsonMainNode.getJSONArray(1);
         } catch (JSONException e) {
             e.printStackTrace();
         }
 
-        JSONArray jsonMainNode = json_obj.optJSONArray("List_Articles");
-        int lengthJsonArr = jsonMainNode.length();
+
+        int lengthJsonArr = jsonArticle.length();
 
         for (int i = 0; i < lengthJsonArr; i++) {
 
-            JSONObject jsonChildNode = null;
+            JSONObject item = null;
             try {
-                jsonChildNode = jsonMainNode.getJSONObject(i);
+                item = jsonArticle.getJSONObject(i);
             } catch (JSONException e) {
                 e.printStackTrace();
             }
 
-
-            String id = jsonChildNode.optString("id").toString();
-            String internalId = jsonChildNode.optString("internalId").toString();
-            String update = jsonChildNode.optString("update").toString();
-            String date = jsonChildNode.optString("date").toString();
-            Integer ranking = Integer.parseInt(jsonChildNode.optString("ranking"));
-            String title = jsonChildNode.optString("title").toString();
-            String subtitle = jsonChildNode.optString("subtitle").toString();
-            String thumb = jsonChildNode.optString("thumb").toString();
+            String id = item.optString("id");
+            String internalId = item.optString("internalId");
+            String update = item.optString("update");
+            String date = item.optString("date");
+            Integer ranking = Integer.parseInt(item.optString("ranking"));
+            String title = item.optString("title");
+            String subtitle = item.optString("subtitle");
+            String thumb = item.optString("thumb");
             JSONObject jObj = null;
             String link = "";
             try {
