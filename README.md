@@ -4,7 +4,7 @@
  
  On the branch "material" i tried to use Android Material Design.
  
-![Image alt](https://github.com/IvanKalabanan/Test-Le-Figaro-/raw/master//s1.png)
-![Image alt](https://github.com/IvanKalabanan/Test-Le-Figaro-/raw/master//s2.png)
+![Image alt](https://github.com/IvanKalabanan/Test-Le-Figaro-/raw/master//s1.jpg)
+![Image alt](https://github.com/IvanKalabanan/Test-Le-Figaro-/raw/master//s2.jpg)
   
-![Image alt](https://github.com/IvanKalabanan/Test-Le-Figaro-/raw/master//s3.png)
+![Image alt](https://github.com/IvanKalabanan/Test-Le-Figaro-/raw/master//s3.jpg)
