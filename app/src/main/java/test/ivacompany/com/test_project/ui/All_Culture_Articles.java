@@ -1,13 +1,12 @@
 package test.ivacompany.com.test_project.ui;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ListView;
 import android.widget.Toast;
 
 import com.octo.android.robospice.persistence.exception.SpiceException;
@@ -15,6 +14,7 @@ import com.octo.android.robospice.request.listener.RequestListener;
 
 import java.util.ArrayList;
 
+import test.ivacompany.com.test_project.Adapters.Adap;
 import test.ivacompany.com.test_project.Adapters.ListAdapter;
 import test.ivacompany.com.test_project.R;
 import test.ivacompany.com.test_project.entity.LinkList;
@@ -27,7 +27,7 @@ public class All_Culture_Articles extends BaseSpiceActivity {
     private ListAdapter listAdapter;
     ArrayList<List_Articles> Culture_Articles;
     GetArticlesDataRequestListener getArticlesDataRequestListener = new GetArticlesDataRequestListener();
-    ListView lv;
+    RecyclerView lv;
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -35,14 +35,35 @@ public class All_Culture_Articles extends BaseSpiceActivity {
         initialization(v);
         getSpiceManager().execute(new GetAllArticlesDataRequest(LinkList.passToAllCultureArticles), getArticlesDataRequestListener);
 
+
+
         return v;
     }
 
     private void initialization(View v) {
 
-        lv = (ListView) v.findViewById(R.id.list_viewMy);
+        lv = (RecyclerView) v.findViewById(R.id.list_viewMy);
 
-        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+       /* lv.addOnItemTouchListener(
+                new RecyclerItemClickListener(getActivity(), new RecyclerItemClickListener.OnItemClickListener() {
+                    @Override public void onItemClick(View view, int position) {
+
+                        Intent intent = new Intent(getActivity(), Article_Activity.class);
+                        intent.putExtra("id", Culture_Articles.get(position).id);
+                        intent.putExtra("title", Culture_Articles.get(position).title);
+                        intent.putExtra("link", Culture_Articles.get(position).link);
+                        intent.putExtra("subtitle", Culture_Articles.get(position).subtitle);
+                        startActivity(intent);
+
+
+                    }
+                })
+        );*/
+
+        LinearLayoutManager llm = new LinearLayoutManager(getActivity());
+        lv.setLayoutManager(llm);
+
+        /*lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
                 Intent intent = new Intent(getActivity(), Article_Activity.class);
@@ -52,7 +73,7 @@ public class All_Culture_Articles extends BaseSpiceActivity {
                 intent.putExtra("subtitle", Culture_Articles.get(position).subtitle);
                 startActivity(intent);
             }
-        });
+        });*/
     }
 
     public final class GetArticlesDataRequestListener implements RequestListener<Wrapper> {
@@ -65,8 +86,8 @@ public class All_Culture_Articles extends BaseSpiceActivity {
         @Override
         public void onRequestSuccess(final Wrapper result) {
             Culture_Articles = (ArrayList<List_Articles>) result.obj;
-            listAdapter = new ListAdapter(getActivity(), R.id.list_viewMy, Culture_Articles);
-            lv.setAdapter(listAdapter);
+                       Adap adapter = new Adap(getActivity(), Culture_Articles);
+            lv.setAdapter(adapter);
         }
     }
 }

@@ -1,25 +1,22 @@
 package test.ivacompany.com.test_project.ui;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ListView;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-import test.ivacompany.com.test_project.Adapters.ListAdapter;
+import test.ivacompany.com.test_project.Adapters.Adap;
 import test.ivacompany.com.test_project.DBHelper;
 import test.ivacompany.com.test_project.R;
 import test.ivacompany.com.test_project.entity.List_Articles;
 
 public class Favorite_Articles extends Activity {
-    private ListAdapter listAdapter;
     ArrayList<List_Articles> favotite = new ArrayList<>();
-    ListView lv;
+    RecyclerView lv;
     DBHelper dbHelper;
 
     @Override
@@ -27,26 +24,23 @@ public class Favorite_Articles extends Activity {
         super.onCreate(savedInstanceState);
         initialization();
         setData();
-        listAdapter = new ListAdapter(this, R.id.list_viewMy, favotite);
-        lv.setAdapter(listAdapter);
+        setAdapter();
+            }
+
+    private void setAdapter(){
+        Adap adapter = new Adap(this, favotite);
+        lv.setAdapter(adapter);
     }
 
     private void initialization() {
         setContentView(R.layout.favorite_activity);
 
-        lv = (ListView) findViewById(R.id.list_viewMy);
+        lv = (RecyclerView) findViewById(R.id.list_viewMy);
 
-        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            public void onItemClick(AdapterView<?> parent, View view,
-                                    int position, long id) {
-                Intent intent = new Intent(Favorite_Articles.this, Article_Activity.class);
-                intent.putExtra("id", favotite.get(position).id);
-                intent.putExtra("title", favotite.get(position).title);
-                intent.putExtra("link", favotite.get(position).link);
-                intent.putExtra("subtitle", favotite.get(position).subtitle);
-                startActivity(intent);
-            }
-        });
+        LinearLayoutManager llm = new LinearLayoutManager(this);
+        lv.setLayoutManager(llm);
+
+
     }
 
     private void setData() {

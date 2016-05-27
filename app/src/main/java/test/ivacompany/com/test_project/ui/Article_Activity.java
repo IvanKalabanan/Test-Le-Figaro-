@@ -4,10 +4,9 @@ import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.text.format.DateFormat;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
+import android.view.View;
 import android.webkit.WebView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -27,12 +26,13 @@ import test.ivacompany.com.test_project.entity.Wrapper;
 import test.ivacompany.com.test_project.roboCLass.BaseSpiceActivityNoFragment;
 import test.ivacompany.com.test_project.task.GetArticleDataRequest;
 
-public class Article_Activity extends BaseSpiceActivityNoFragment {
+public class Article_Activity extends BaseSpiceActivityNoFragment implements View.OnClickListener {
     ArrayList<Article> article;
     GetArticlesDataRequestListener getArticlesDataRequestListener = new GetArticlesDataRequestListener();
     WebView webView;
     TextView authorTextView, dateTextView, titleTextView;
     DBHelper dbHelper;
+    FloatingActionButton favoriteButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,7 +50,20 @@ public class Article_Activity extends BaseSpiceActivityNoFragment {
         dateTextView = (TextView) findViewById(R.id.text_Date);
         titleTextView = (TextView) findViewById(R.id.titleText);
         webView = (WebView) findViewById(R.id.WebViewMy);
+        favoriteButton = (FloatingActionButton) findViewById(R.id.fab);
+        favoriteButton.setOnClickListener(this);
         dbHelper = new DBHelper(this);
+    }
+
+    @Override
+    public void onClick(View v) {
+
+        if (checkInDatabase()) {
+            deleteFromDatabase();
+        } else {
+            addToDatabase();
+        }
+
     }
 
     private void setData() {
@@ -83,29 +96,6 @@ public class Article_Activity extends BaseSpiceActivityNoFragment {
         cal.setTimeInMillis(t * 1000L);
         String date = DateFormat.format("dd-MM-yyyy hh:mm", cal).toString();
         return date;
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.article_activity, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle item selection
-        switch (item.getItemId()) {
-            case R.id.favoriteMenuItem:
-                if (checkInDatabase()) {
-                    deleteFromDatabase();
-                } else {
-                    addToDatabase();
-                }
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
     }
 
     private boolean checkInDatabase() {

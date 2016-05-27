@@ -1,11 +1,11 @@
 package test.ivacompany.com.test_project.roboCLass;
 
-import android.support.v7.app.AppCompatActivity;
+import android.app.Activity;
 
 import com.octo.android.robospice.SpiceManager;
 
 
-public abstract class BaseSpiceActivityNoFragment extends AppCompatActivity {
+public abstract class BaseSpiceActivityNoFragment extends Activity {
     private SpiceManager spiceManager = new SpiceManager(SampleSpiceService.class);
 
     @Override

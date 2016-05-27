@@ -14,7 +14,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
 
     public void onCreate(SQLiteDatabase db) {
-        Log.d("pizda", "--- onCreate database ---");
+        Log.d("data", "--- onCreate database ---");
         db.execSQL("create table articles ("
                 + "id text ,"
                 + "link text,"

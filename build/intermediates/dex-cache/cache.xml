@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/home/iva/Документи/Test_Project/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/22.2.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="3abb4b88f5a8a0584a9b01d3170d7165f12f8588">
+        <dex dex="/home/iva/Документи/Test_Project/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-22.2.1_b563e2fdc0fdd66063f5833affb43bd01103512d/classes.dex" />
+    </item>
+    <item
+        jar="/home/iva/Документи/Test_Project/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.1/jars/libs/internal_impl-22.2.1.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
+        <dex dex="/home/iva/Документи/Test_Project/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-22.2.1_920d60b27c60f2dbc9e9c839398b8379cde66d74/classes.dex" />
+    </item>
+    <item
+        jar="/home/iva/Документи/Test_Project/app/src/main/libs/java-json.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="edad9c5de6fb8df07c535a47045956026011ffa3">
+        <dex dex="/home/iva/Документи/Test_Project/app/build/intermediates/transforms/dex/debug/folders/1000/2/java-json_fd4995240f2a5b8754f4df9f58fb5a759fd22983/classes.dex" />
+    </item>
+    <item
+        jar="/home/iva/Документи/Test_Project/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/22.2.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="e1fa5e1123997a55e3ed65b44892993ff4b58cfe">
+        <dex dex="/home/iva/Документи/Test_Project/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-cardview-v7-22.2.1_c1debe3792451ae0b0a05a55f7f561494d536aa5/classes.dex" />
+    </item>
+    <item
+        jar="/root/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/22.2.1/support-annotations-22.2.1.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
+        <dex dex="/home/iva/Документи/Test_Project/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-22.2.1_d1acf46021f20f049c52e8e8d2eef24d273c7976/classes.dex" />
+    </item>
+    <item
+        jar="/home/iva/Документи/Test_Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
+        <dex dex="/home/iva/Документи/Test_Project/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-22.2.1_d7f44b4ac5718d26232b763f89478f41552fb032/classes.dex" />
+    </item>
+    <item
+        jar="/home/iva/Документи/Test_Project/app/build/intermediates/exploded-aar/com.android.support/design/22.2.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="1821601ddbec5ff125653097812823388700af74">
+        <dex dex="/home/iva/Документи/Test_Project/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-22.2.1_332f0d8ace8a03bad381c7de04cf8518d85cdd34/classes.dex" />
+    </item>
+    <item
+        jar="/root/.gradle/caches/modules-2/files-2.1/com.octo.android.robospice/robospice/1.4.14/fffe1563473feb2f956608554d3e97ad805914a7/robospice-1.4.14.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="fffe1563473feb2f956608554d3e97ad805914a7">
+        <dex dex="/home/iva/Документи/Test_Project/app/build/intermediates/transforms/dex/debug/folders/1000/10/robospice-1.4.14_5910a0d3e9695e6efd9e1f2193f134238d06e0f1/classes.dex" />
+    </item>
+    <item
+        jar="/home/iva/Документи/Test_Project/app/build/intermediates/exploded-aar/net.yanzm/mth/1.0.4/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="d621cb785df9d9321bc5832bb3e6e723d2f6e1b6">
+        <dex dex="/home/iva/Документи/Test_Project/app/build/intermediates/transforms/dex/debug/folders/1000/10/net.yanzm-mth-1.0.4_fb0e97cf7866f3deddb4f27ae6d7fe53ae83baf3/classes.dex" />
+    </item>
+    <item
+        jar="/home/iva/Документи/Test_Project/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="f8efd0096475e0daf054267b61544e10dc776503">
+        <dex dex="/home/iva/Документи/Test_Project/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-22.2.1_3ab766991db3f1f3897631f1be6c7e03e07586f0/classes.dex" />
+    </item>
+    <item
+        jar="/home/iva/Документи/android-studio/gradle/m2repository/org/apache/commons/commons-lang3/3.3.2/commons-lang3-3.3.2.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="90a3822c38ec8c996e84c16a3477ef632cbc87a3">
+        <dex dex="/home/iva/Документи/Test_Project/app/build/intermediates/transforms/dex/debug/folders/1000/10/commons-lang3-3.3.2_1c8b5f490d19393b39db34be4a9106677833a67e/classes.dex" />
+    </item>
+    <item
+        jar="/root/.gradle/caches/modules-2/files-2.1/com.octo.android.robospice/robospice-cache/1.4.14/1a13bea0b3ae105c44cb6be7fc76b6d36098faf5/robospice-cache-1.4.14.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="1a13bea0b3ae105c44cb6be7fc76b6d36098faf5">
+        <dex dex="/home/iva/Документи/Test_Project/app/build/intermediates/transforms/dex/debug/folders/1000/10/robospice-cache-1.4.14_3f788841d0d0f1f1d0571e15d2cdb0e3539e9b9d/classes.dex" />
+    </item>
+    <item
+        jar="/home/iva/Документи/Test_Project/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="211aebb9dd02480728fa5c8f285eef7d570913cf">
+        <dex dex="/home/iva/Документи/Test_Project/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_ee6e3d4d9761c61bb35083afd5f5c332b00d3fcb/classes.dex" />
+    </item>
+    <item
+        jar="/home/iva/Документи/Test_Project/app/src/main/libs/universal-image-loader-1.8.3.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="d2efc8f6c4ed6beb71d27595b19239c2b29b3dfb">
+        <dex dex="/home/iva/Документи/Test_Project/app/build/intermediates/transforms/dex/debug/folders/1000/2/universal-image-loader-1.8.3_dca69bd087a5c34306e91470e9854a08f2134cc1/classes.dex" />
+    </item>
+    <item
+        jar="/home/iva/Документи/Test_Project/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="ebb50c1a056efc3bb9e8ce51e719800a064895d4">
+        <dex dex="/home/iva/Документи/Test_Project/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_1427b3ce7a5c58aa2317ec5f38f71f193c36ce6b/classes.dex" />
+    </item>
+    <item
+        jar="/root/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-io/1.3.2/b6dde38349ba9bb5e6ea6320531eae969985dae5/commons-io-1.3.2.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="b6dde38349ba9bb5e6ea6320531eae969985dae5">
+        <dex dex="/home/iva/Документи/Test_Project/app/build/intermediates/transforms/dex/debug/folders/1000/10/commons-io-1.3.2_8ca551b2bfc2c175dda2f701221c58f0e74d1830/classes.dex" />
+    </item>
+    <item
+        jar="/home/iva/Документи/Test_Project/app/src/main/libs/gson-2.3.1.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="ecb6e1f8e4b0e84c4b886c2f14a1500caf309757">
+        <dex dex="/home/iva/Документи/Test_Project/app/build/intermediates/transforms/dex/debug/folders/1000/2/gson-2.3.1_62cb08a1b64cd2f321048e3245ce68c485a22b9b/classes.dex" />
+    </item>
+
+</items>
